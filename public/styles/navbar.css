@@ -1,0 +1,315 @@
+header {
+  z-index: 100;
+  position: sticky;
+  top: 0;
+}
+
+.container {
+  padding: 8px 15px 10px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fafafa;
+  box-shadow: inset 0px -1px 0px #c5c5c6;
+}
+
+/*? -- Logo container -- */
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-container img {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.text p {
+  font-size: 20px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.this-item {
+  color: crimson;
+}
+
+/*? -- Navbar container -- */
+.navbar-container {
+  flex-grow: 2;
+}
+
+.toggle-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 35px;
+}
+
+.navbar-container li {
+  list-style: none;
+}
+
+.navbar-container a {
+  text-decoration: none;
+  font-weight: 600;
+  color: black;
+  font-size: 1.5rem;
+}
+
+/* .navbar-container a:hover, */
+
+
+.learn-menu {
+  position: relative;
+}
+
+.flex-list {
+  cursor: pointer;
+}
+
+.flex-list svg {
+  position: relative;
+  top: 2px;
+}
+
+
+.practice-menu {
+  position: relative;
+}
+
+.price-menu {
+  position: relative;
+}
+
+.menu-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  top: 40px;
+  position: absolute;
+  width: 300px;
+  height: 0;
+  overflow: hidden;
+  left: 0;
+  background-color: #fff;
+}
+
+.learn-menu:hover .learn-menu-list {
+  height: 300px;
+  border-radius: 5px;
+  box-shadow: 0 0 0 20px rgba(0, 0, 0, 0.01);
+}
+
+.practice-menu:hover .practice-menu-list {
+  height: 300px;
+  border-radius: 5px;
+  box-shadow: 0 0 0 20px rgba(0, 0, 0, 0.01);
+}
+
+.price-menu:hover .price-menu-list {
+  height: 300px;
+  border-radius: 5px;
+  box-shadow: 0 0 0 20px rgba(0, 0, 0, 0.01);
+}
+
+/*? -- Auth container -- */
+.auth-container-mobile {
+  display: none;
+}
+
+.auth-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.user-icon {
+  width: 20px;
+  height: 20px;
+  display: none;
+  cursor: pointer;
+}
+
+.signup button,
+.login button {
+  padding: 8px 25px;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-family: Lato-f, Arial, Helvetica, sans-serif;
+  outline: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+.signup button {
+  background-color: crimson;
+}
+
+.signup button:hover {
+  background-color: #000000;
+}
+
+.login button {
+  color: #000000;
+}
+
+.login button:hover {
+  color: #fff;
+  background-color: #000000;
+}
+
+/*? -- Hamburger -- */
+.hamburger {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  border: none;
+  display: none;
+  background: #fafafa;
+  align-items: center;
+  position: relative;
+}
+
+.hamburger span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: #333;
+  position: absolute;
+  pointer-events: none;
+  transition: opacity 0.3s 0.15s ease-out;
+}
+
+.hamburger span:nth-child(1),
+.hamburger span:nth-child(3) {
+  transition: transform 0.3s ease-out;
+}
+
+.hamburger span:nth-child(1) {
+  transform: translateY(7px);
+}
+
+.hamburger span:nth-child(3) {
+  transform: translateY(-7px);
+}
+
+.hamburger.open span:nth-child(1) {
+  transform: translate(0) rotate(135deg);
+}
+
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+  transition: opacity 0s ease-out;
+}
+
+.hamburger.open span:nth-child(3) {
+  transform: translate(0) rotate(-135deg);
+}
+
+/*? -- Responsive Navbar -- */
+@media screen and (max-width: 800px) {
+  .logo-container {
+    order: 2;
+    flex-grow: 3;
+  }
+
+  .auth-btns {
+    display: none;
+  }
+
+  .menu-list {
+    display: none;
+  }
+
+  .auth-container-mobile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    height: inherit;
+  }
+
+  .signup button,
+  .login button {
+    padding: 13px 35px;
+    font-size: 1.8rem;
+  }
+
+  .login button {
+    padding: 13px 42px;
+  }
+
+  .user-icon {
+    display: block;
+  }
+
+  .navbar-container {
+    flex-grow: 0;
+    order: 1;
+  }
+
+  .learn-menu,
+  .practice-menu,
+  .price-menu {
+    width: 100%;
+  }
+
+  .flex-list {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+
+  }
+
+  .flex-list svg {
+    position: relative;
+    top: 0;
+  }
+
+  .flex-list a {
+    font-size: 1.6rem;
+  }
+
+  .flex-list i {
+    font-size: 15px;
+  }
+
+  .toggle-container {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    position: absolute;
+    background: #fafafa;
+    top: 100%;
+    left: 0;
+    height: 100vh;
+    border-right: 1px solid #c5c5c6;
+    padding: 30px 0;
+    transform: translateX(-100%);
+    transform-origin: left;
+    /* transition: transform .3s ease-out; */
+  }
+
+  .open {
+    transform: translateX(0%);
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .auth-container {
+    order: 3;
+  }
+}

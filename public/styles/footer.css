@@ -1,0 +1,138 @@
+footer {
+  padding: 0 20px 40px 20px;
+  background: linear-gradient(to right, #00093c, #2d0b00);
+  border-top-left-radius: 5%;
+  border-top-right-radius: 5%;
+}
+
+/* hello world */
+
+.footer {
+  max-width: 1200px;
+  margin: auto auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+  font-family: lato-f, Arial, Helvetica, sans-serif
+}
+
+.footer h2 {
+  color: #babfc4;
+  font-size: 2.3rem;
+  position: relative;
+}
+
+.courses,
+.company,
+.socials {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  padding: 20px;
+}
+
+/* .courses h2::before,
+.company h2::before,
+.socials h2::before {
+  content: "";
+  position: absolute;
+  height: 4px;
+  bottom: -6px;
+  border-radius: 6px;
+  background-color: #ff7f50;
+}  
+.courses h2::before {
+  width: 114%;
+  left: -5px;
+}
+
+.company h2::before {
+  left: -20px;
+  width: 137%;
+}
+
+.socials h2::before {
+  width: 114%;
+  left: -5px;
+} */
+
+.courses li {
+  line-height: 1.5;
+  list-style: none;
+}
+
+.courses a,
+.company a,
+.socials a {
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: #9199a1;
+}
+
+.courses a {
+  font-size: 1.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.courses a:hover,
+.company a:hover,
+.socials a:hover {
+  color: #ffa500;
+}
+
+.copyright {
+  text-align: center;
+  font-size: 1.3rem;
+  color: #9199a1;
+}
+
+/*? ------------- Responsive banner ------------- */
+
+@media screen and (max-width : 532px) {
+  footer {
+    border-top-left-radius: 10%;
+    border-top-right-radius: 10%;
+  }
+
+  .footer {
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+  }
+
+  .courses {
+    order: 1;
+  }
+
+  .company {
+    flex-grow: 1;
+    order: 3;
+  }
+
+  .socials {
+    order: 2;
+  }
+}
+
+@media screen and (max-width : 346px) {
+  footer {
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+  }
+
+  .courses {
+    flex-grow: 1;
+  }
+
+  .company {
+    flex-grow: 1;
+  }
+
+  .socials {
+    flex-grow: 1;
+  }
+}
